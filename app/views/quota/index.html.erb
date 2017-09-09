@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quota</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Month</th>
+      <th>Year</th>
+      <th>Value</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quota.each do |quotum| %>
+      <tr>
+        <td><%= quotum.type %></td>
+        <td><%= quotum.month %></td>
+        <td><%= quotum.year %></td>
+        <td><%= quotum.value %></td>
+        <td><%= quotum.description %></td>
+        <td><%= link_to 'Show', quotum %></td>
+        <td><%= link_to 'Edit', edit_quotum_path(quotum) %></td>
+        <td><%= link_to 'Destroy', quotum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quotum', new_quotum_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @quotum.type %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @quotum.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @quotum.year %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @quotum.value %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quotum.description %>
+</p>
+
+<%= link_to 'Edit', edit_quotum_path(@quotum) %> |
+<%= link_to 'Back', quota_path %>
