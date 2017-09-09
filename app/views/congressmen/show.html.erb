@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @congressman.name %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @congressman.party %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @congressman.uf %>
+</p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @congressman.ranking %>
+</p>
+
+<%= link_to 'Edit', edit_congressman_path(@congressman) %> |
+<%= link_to 'Back', congressmen_path %>

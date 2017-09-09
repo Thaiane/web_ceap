@@ -1,0 +1,37 @@
+<%= form_with(model: congressman, local: true) do |form| %>
+  <% if congressman.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(congressman.errors.count, "error") %> prohibited this congressman from being saved:</h2>
+
+      <ul>
+      <% congressman.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :congressman_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :party %>
+    <%= form.text_field :party, id: :congressman_party %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uf %>
+    <%= form.text_field :uf, id: :congressman_uf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ranking %>
+    <%= form.number_field :ranking, id: :congressman_ranking %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
